@@ -8,11 +8,11 @@ const app = express();
 // servidor de sockect.io | nodeserver
 const server = require('http').createServer(app);
 module.exports.io = require('socket.io')(server);
-require('./sockets/socket');
+require('./src/sockets/socket');
 
 
 // path publico
-const publicPath = path.resolve(__dirname, 'public');
+const publicPath = path.resolve(__dirname, 'src/public');
 
 app.use(express.static(publicPath));
 
